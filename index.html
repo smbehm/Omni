@@ -232,8 +232,9 @@ header.solid{background:rgba(4,4,10,.82);backdrop-filter:blur(18px);-webkit-back
 
 /* list */
 .blist{list-style:none;display:grid;gap:16px}
-.blist li{display:grid;grid-template-columns:auto 1fr;gap:14px;color:var(--muted-2);font-weight:300;font-size:15px}
-.blist li::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:9px;flex-shrink:0}
+.blist li{position:relative;padding-left:20px;color:var(--muted-2);font-weight:300;font-size:15px;line-height:1.62}
+.blist li::before{content:'';position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.blist li i,.blist li em{font-style:italic;color:var(--muted-2)}
 .blist li b{color:var(--ink);font-weight:500}
 
 /* quote */
