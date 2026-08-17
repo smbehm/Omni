@@ -152,6 +152,24 @@ header.solid{background:rgba(4,4,10,.82);backdrop-filter:blur(18px);-webkit-back
 .stat .num{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,4vw,50px);font-weight:600;color:var(--gold);letter-spacing:-.03em;line-height:1}
 .stat .lbl{margin-top:12px;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
 
+/* ---------- ORB (key art) ---------- */
+.orb{margin:38px 0 0;position:relative;display:grid;place-items:center;isolation:isolate}
+.orb::before{
+  content:'';position:absolute;z-index:0;width:78%;aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle,rgba(232,180,74,.30),rgba(232,180,74,.07) 55%,transparent 72%);
+  filter:blur(34px);animation:orbGlow 7s ease-in-out infinite;
+}
+.orb img{
+  position:relative;z-index:1;width:min(100%,480px);height:auto;
+  filter:drop-shadow(0 0 42px rgba(232,180,74,.34)) drop-shadow(0 24px 70px rgba(0,0,0,.6));
+  animation:orbFloat 9s ease-in-out infinite;
+}
+@keyframes orbFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes orbGlow{0%,100%{opacity:.75;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+@media (prefers-reduced-motion:reduce){
+  .orb img,.orb::before{animation:none}
+}
+
 /* ---------- LAYOUT HELPERS ---------- */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,80px);align-items:center}
 .grid-2.wide-l{grid-template-columns:1.05fr .95fr}
@@ -367,12 +385,9 @@ footer{border-top:1px solid var(--line-soft);padding:52px 0 40px}
     </div>
     <div class="rv">
       <p style="font-size:16px">In doing so, they unlock a future in which technology and empathy merge to end suffering while expanding what it means to be human.</p>
-      <div class="stats" style="margin-top:36px">
-        <div class="stat"><div class="num">2026</div><div class="lbl">Future Vision<br>XPRIZE</div></div>
-        <div class="stat"><div class="num">100B+</div><div class="lbl">Human life stories<br>held in the sphere</div></div>
-        <div class="stat"><div class="num">10</div><div class="lbl">Stories tall —<br>the golden brain</div></div>
-        <div class="stat"><div class="num">$100M</div><div class="lbl">Projected<br>production budget</div></div>
-      </div>
+      <figure class="orb">
+        <img src="assets/img/TN.webp" alt="Omniscience — the golden mind">
+      </figure>
     </div>
   </div>
 </section>
