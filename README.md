@@ -1,6 +1,6 @@
 # OMNISCIENCE — Official Film Site
 
-A single-page showcase site for the feature film **OMNISCIENCE**, submitted for the Future Vision XPRIZE 2026.
+A single-page showcase site for the feature film **OMNISCIENCE**.
 
 > An optimistic, technology-forward vision of humanity's future in which advanced AI learns the highest form of intelligence: LOVE.
 
